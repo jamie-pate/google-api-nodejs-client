@@ -122,11 +122,7 @@ async function createAPIRequestAsync<T>(parameters: APIRequestParams) {
 
   // Parse urls
   if (options.url) {
-    const encodedParams = Object.assign(
-        {},
-        ...Object.keys(params).map(
-            x => ({[x]: encodeURIComponent(params[x])})));
-    options.url = parseString(options.url, encodedParams);
+    options.url = parseString(options.url, params);
   }
   if (parameters.mediaUrl) {
     parameters.mediaUrl = parseString(parameters.mediaUrl, params);
