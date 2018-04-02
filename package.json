@@ -18,7 +18,8 @@
     "LICENSE",
     "README.md",
     "build/src",
-    "package.json"
+    "package.json",
+    "src"
   ],
   "semistandard": {
     "ignore": [
@@ -71,7 +72,8 @@
   ],
   "version": "28.0.1",
   "scripts": {
-    "test": "make test -j 4"
+    "test": "make test -j 4",
+    "install": "tsc -p ."
   },
   "author": "Google Inc.",
   "keywords": [
